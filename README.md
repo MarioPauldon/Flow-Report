@@ -37,8 +37,8 @@ A simple Tkinter login screen wraps the app for local use.
   pip install pandas openpyxl dash plotly
 
 
-### File Structure 
-├── flow_report.py                         # Main Python script
-├── Copy of sample_post_trade_data.xlsx   # Sample input file
-└── README.md                              # Project documentation
+### File Structure
+├── flow_report.py                       # Main Python script
+├── Copy of sample_post_trade_data.xlsx  # Sample input file
+└── README.md                            # Project documentation
 
