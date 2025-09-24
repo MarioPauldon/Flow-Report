@@ -1,45 +1,40 @@
-# Flowerpot Flow Report Dashboard
+# Flow Report Dashboard
 
-This is an internal analytics tool created to process and summarize product flow data for the Flowerpot team. It uses a Microsoft Excel `.xlsx` dataset to generate insights on client progress through the engagement pipeline.
+An internal analytics tool for processing and visualizing post-trade data. The dashboard reads from an Excel dataset and provides interactive charts to help teams explore trading activity across clients, venues, regions, and timeframes.
 
 ## Overview
+The dashboard allows users to:
+- Upload and analyze `.xlsx` post-trade data  
+- Filter results by timeframe (day, week, month, year), side (buy/sell), venue type, region, client, ticker, and date  
+- Visualize trading activity through interactive charts, including:
+  - Traded value by side (Buy vs Sell)  
+  - Traded value by sector  
+  - Traded value by client  
+  - Traded value over time  
+  - Traded value by region  
+  - Traded value by execution venue (Lit vs Dark)  
+  - Traded value by ticker and destination  
 
-The dashboard reads from a preformatted Excel file and outputs key summaries:
-
-- Total projects analyzed
-- Client and partner participation
-- Breakdown by engagement stages (e.g., Early Conversation, Pilot, Contract)
-- Conversion rates across stages
-- Reminders for client follow-up
-
-## Features
-
-- **Excel File Input**: Processes `.xlsx` files instead of `.csv`
-- **Stage Analysis**: Understand how many clients are in each product stage
-- **Conversion Metrics**: Track progress across engagement stages
-- **Follow-Up Suggestions**: Flags clients who may need re-engagement
+A simple Tkinter login screen wraps the app for local use.  
 
 ## Tech Stack
-
-- Python 3.x
-- pandas
-- openpyxl (for reading `.xlsx` files)
+- **Backend:** Python 3.x, pandas, openpyxl  
+- **Frontend:** Dash (Plotly), Tkinter  
+- **Visualization:** Plotly Express & Graph Objects  
 
 ## How It Works
-
-1. Prompts user for the Excel file path
-2. Loads the sheet using `pandas.read_excel()`
-3. Parses relevant columns (e.g., `Client Name`, `Stage`, `Product`)
-4. Generates a dashboard-style textual summary using the `print_stats()` function
-5. Optionally allows saving results to a `.txt` file
+1. User logs in via a simple Tkinter GUI.  
+2. The app loads a specified Excel file from the Downloads folder.  
+3. Data is parsed and filtered based on dropdown selections.  
+4. Interactive Dash charts are generated to explore trade activity.  
+5. The dashboard automatically opens in the browser.  
 
 ## Getting Started
-
 ### Prerequisites
-Install the necessary libraries:
-
-```bash
-pip install pandas openpyxl
+- Python 3.7+  
+- Required libraries:  
+  ```bash
+  pip install pandas openpyxl dash plotly
 
 ### File Structure 
 .
