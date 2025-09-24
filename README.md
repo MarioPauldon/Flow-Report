@@ -38,7 +38,7 @@ A simple Tkinter login screen wraps the app for local use.
 
 
 ### File Structure
-├── flow_report.py                       # Main Python script
-├── Copy of sample_post_trade_data.xlsx  # Sample input file
-└── README.md                            # Project documentation
+flow_report_dash.py                       # Main Python script
+Copy of sample_post_trade_data.xlsx  # Sample input file
+README.md                            # Project documentation
 
